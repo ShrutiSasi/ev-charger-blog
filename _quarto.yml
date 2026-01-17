@@ -1,5 +1,18 @@
 project:
-  title: "blog"
+  type: website
 
+website:
+  title: "EV Charger Insights"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Blog"
+        href: posts/
+    right:
+      - icon: github
+        href: https://github.com/ShrutiSasi/ev-charger-blog
 
-
+format:
+  html:
+    theme: cosmo
