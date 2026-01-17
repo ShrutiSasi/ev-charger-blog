@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Shruti Sasi">
-<meta name="dcterms.date" content="2026-01-16">
 
-<title>Predictive EV Charger Siting in Canada – EV Charger Insights</title>
+<title>blog – EV Charger Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,21 +70,79 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">EV Charger Insights</span>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">EV Charger Blog</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -94,11 +152,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/"> 
+    <a class="nav-link" href="./posts/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -119,37 +177,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YSUyMFNjaWVuY2U=">Data Science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RVY=">EV <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TUw=">ML <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Predictive EV Charger Siting in Canada</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">EV</div>
-    <div class="quarto-category">ML</div>
-    <div class="quarto-category">Data Science</div>
-  </div>
-  </div>
+<h1 class="title">blog</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Shruti Sasi </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 16, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -159,87 +202,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="charging-the-future-can-data-science-fix-my-range-anxiety" class="level1">
-<h1>Charging the Future: Can Data Science Fix My “Range Anxiety”?</h1>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="..\resources/ev_station.jpg" class="img-fluid figure-img" alt="AI generated image" width="500"></p>
-<figcaption>AI generated image</figcaption>
-</figure>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
+
+
+
+</section>
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="RVYlMkNNTCUyQ0RhdGElMjBTY2llbmNl" data-listing-date-sort="1768550400000" data-listing-file-modified-sort="1768629220177" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1222">
+<div class="thumbnail"><a href="./posts/ev-charger-siting.html" class="no-external">
+
+<p class="card-img-top"><img src="resources\ev_station.jpg" alt="AI generated image"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/ev-charger-siting.html" class="no-external">Predictive EV Charger Siting in Canada</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RVY='); return false;">EV</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('TUw='); return false;">ML</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFNjaWVuY2U='); return false;">Data Science</div>
+
 </div>
-<section id="ev-or-gashybrid-which-should-i-pick" class="level2">
-<h2 class="anchored" data-anchor-id="ev-or-gashybrid-which-should-i-pick">EV or Gas/Hybrid: Which should I pick?</h2>
-<p>A few weeks ago, my husband and I sat at our kitchen table to do what thousands of Canadian families do every year: pick out our next car. We really wanted to go green. We were ready to ditch the gas station forever. But as we weighed the pros and cons, the conversation kept hitting a wall.</p>
-<p>“Look at the map,” my husband said, pulling up a charging app on his phone. “If we want to visit family up north or take a spontaneous weekend trip, we have to plan our whole lives around where the chargers are. With a gas car, we don’t even think about it. The stations are just <em>there</em> — they’re everywhere, and they’re reliable.”</p>
-<p>He was right. In that moment, the gas car won, not because it was a better machine, but because it felt safer. For us, and for many Canadians, switching to an EV feels like a leap of faith into a network that is still playing catch-up. This is the heart of “Range Anxiety.” It’s not just about the battery; it’s about the fear that the convenience of the past century won’t be matched by the infrastructure of the next.</p>
-</section>
-<section id="the-great-canadian-gap" class="level2">
-<h2 class="anchored" data-anchor-id="the-great-canadian-gap">The Great Canadian Gap</h2>
-<p>We are currently in a massive transition period. On one hand, the numbers look great. Between 2024 and early 2025, the number of public chargers in Canada jumped by about 24%. Federal programs like the Zero Emission Vehicle Infrastructure Program (ZEVIP) are pumping millions into the ground, and as of early 2026, we are seeing chargers pop up in places we never expected.</p>
-<p>But look closer, and you’ll see the cracks. While you might find dozens of chargers in a trendy downtown Toronto mall, try finding one in a suburban rental neighborhood or a rural corridor in the Prairies. This is the “Infrastructure Gap.” Analysts tell us that we will need hundreds of thousands more chargers to meet our 2035 goals.</p>
-<p>If we don’t get the placement right, the “predictability” my husband was looking for will remain a luxury. The problem isn’t just about building <em>more</em> — it’s about building <em>smarter</em>.</p>
-</section>
-<section id="why-the-old-way-of-planning-is-failing" class="level2">
-<h2 class="anchored" data-anchor-id="why-the-old-way-of-planning-is-failing">Why the “Old Way” of Planning is Failing</h2>
-<p>In the past, urban planning was reactive. A city might place a charger where they received the most requests or simply where there was an empty parking lot near a power line. But this “first-come, first-served” approach creates three major problems:</p>
-<ol type="1">
-<li><p><strong>Inequity:</strong> It favors wealthy areas where people already own EVs and have private garages.</p></li>
-<li><p><strong>Waste:</strong> We end up with “ghost stations” — expensive chargers in areas where no one actually stops.</p></li>
-<li><p><strong>Overcrowding:</strong> Popular stations become bottlenecked, leading to those frustrating lines that scare away potential buyers.</p></li>
-</ol>
-<p>To solve this, we need to stop guessing. As a data science student, I see this as the perfect job for Machine Learning.</p>
-</section>
-<section id="the-data-science-solution-a-digital-scout" class="level2">
-<h2 class="anchored" data-anchor-id="the-data-science-solution-a-digital-scout">The Data Science Solution: A “Digital Scout”</h2>
-<p>Imagine a computer model that acts like a scout, looking at the entire country and saying, <em>“Put a fast charger exactly here, and it will be busy 80% of the time.”</em> This isn’t science fiction; it’s what we can do right now by feeding a model the right “ingredients.”</p>
-<p>To build a truly reliable network, a model needs to look at four main types of data:</p>
-<section id="the-human-element-travel-patterns" class="level3">
-<h3 class="anchored" data-anchor-id="the-human-element-travel-patterns">1. The Human Element (Travel Patterns)</h3>
-<p>We don’t just drive in straight lines. We stop at grocery stores, parks, and offices. By analyzing traffic flow and “dwell time” (how long a car stays parked in one spot), a model can identify where a charger would be most useful. If people typically spend 40 minutes at a specific shopping center, that’s a prime spot for a Level 2 charger.</p>
-</section>
-<section id="the-housing-gap-equity-data" class="level3">
-<h3 class="anchored" data-anchor-id="the-housing-gap-equity-data">2. The Housing Gap (Equity Data)</h3>
-<p>This is the most important part of the puzzle. Millions of Canadians live in apartments or condos where they can’t just plug in at night. If we only look at where EVs are <em>currently</em> owned, we miss these people. By including census data on housing types, the model can prioritize public chargers for renters, ensuring that living in an apartment isn’t a barrier to going green.</p>
-</section>
-<section id="the-power-grid-supply-data" class="level3">
-<h3 class="anchored" data-anchor-id="the-power-grid-supply-data">3. The Power Grid (Supply Data)</h3>
-<p>You can’t just stick a high-speed charger anywhere. They pull a massive amount of power. By integrating data from utility companies, the model can ensure that new stations are placed where the grid is strong enough to handle them without requiring a multi-million dollar upgrade.</p>
-</section>
-<section id="the-competition-existing-trends" class="level3">
-<h3 class="anchored" data-anchor-id="the-competition-existing-trends">4. The Competition (Existing Trends)</h3>
-<p>We can learn from the chargers we already have. Which ones are always full? Which ones are always broken? By looking at historical usage, the model can predict “hot spots” before they even become a problem.</p>
-</section>
-</section>
-<section id="case-study-a-tale-of-two-cities" class="level2">
-<h2 class="anchored" data-anchor-id="case-study-a-tale-of-two-cities">Case Study: A Tale of Two Cities</h2>
-<p>Let’s look at a city like Calgary. If planners use the traditional way, they might put all their new chargers near the downtown office towers. But once the 5:00 PM rush ends, those chargers sit empty while people head home to the suburbs.</p>
-<p>If they introduce ML models into their planning, it might point them to a specific suburban commuter hub or a “cold spot” near a popular community center. This ensures the chargers are working 24/7. It maximizes the “return on investment” for every taxpayer dollar spent. Every kilowatt of energy is going where it’s actually needed.</p>
-</section>
-<section id="impact-from-anxiety-to-freedom" class="level2">
-<h2 class="anchored" data-anchor-id="impact-from-anxiety-to-freedom">Impact: From Anxiety to Freedom</h2>
-<p>When we let data lead the way, we do something bigger than just building infrastructure — we build trust.</p>
-<p>If my husband and I can look at a map and see that there are chargers in the neighbourhoods where we actually shop, and on the rural roads where we actually travel, that “leap of faith” becomes a simple, logical choice.</p>
-<p>This data-driven approach could aid with our battle with climate issues. It ensures that the transition to clean energy isn’t just for people with six-figure incomes and three-car garages. It’s for the student in a basement suite and the family in a high-rise. It makes the “green” choice accessible to everyone.</p>
-<p>The transition to electric vehicles is one of the biggest shifts in human history. It is about reimagining how we move. But we can’t build a new world using old tools.</p>
-<p>Machine learning gives us a roadmap. It turns a chaotic infrastructural rollout into a strategic, evidence-based plan. It allows city planners and energy providers to predict and act better.</p>
-<p>My husband and I haven’t bought that car yet. But seeing how we can use data to turn a “leap of faith” into a “predictable path” gives me a lot of hope. When the network is as reliable as the old gas station down the street, we won’t be sitting at the kitchen table arguing about range. We’ll be sitting in the car, ready for the next trip.</p>
-</section>
-<section id="data-sources-further-reading" class="level2">
-<h2 class="anchored" data-anchor-id="data-sources-further-reading">Data Sources &amp; Further Reading</h2>
-<ul>
-<li><p><strong>Public Charging Growth Data:</strong> <a href="https://electricautonomy.ca/data-trackers/public-charging-networks/2025-03-06/2025-public-ev-charging-networks-canada/">Electric Autonomy Canada — 2025 EV Charging Network Report</a></p></li>
-<li><p><strong>Federal Funding &amp; Targets:</strong> <a href="https://natural-resources.canada.ca/energy-efficiency/transportation-energy-efficiency/zero-emission-vehicle-infrastructure-program">Natural Resources Canada (NRCan) — Zero Emission Vehicle Infrastructure Program (ZEVIP)</a></p></li>
-<li><p><strong>National Infrastructure Forecasts:</strong> <a href="https://natural-resources.canada.ca/energy-efficiency/transportation-energy-efficiency/resource-library/electric-vehicle-charging-infrastructure-canada">NRCan/Dunsky — Electric Vehicle Charging Infrastructure for Canada (2025–2040 Forecast)</a></p></li>
-<li><p><strong>Global Trends &amp; Utilization Research:</strong> <a href="https://www.iea.org/reports/global-ev-outlook-2025/electric-vehicle-charging">International Energy Agency (IEA) — Global EV Outlook 2025</a></p></li>
-<li><p><strong>Consumer Barriers &amp; Industry Insights:</strong> <a href="https://www.cvma.ca/wp-content/uploads/2024/11/Ambition-Meets-Reality-Closing-the-electric-vehicle-charging-infrastructure-gap.pdf">Canadian Vehicle Manufacturers’ Association (CVMA) — Closing the EV Charging Gap</a></p></li>
-<li><p><strong>Regional Progress (Case Study Ref):</strong> <a href="https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/electricity-alternative-energy/transportation/2024_zev_annual_report.pdf">Government of British Columbia — 2024 Zero-Emission Vehicle Update</a></p></li>
-</ul>
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
+<div class="delink listing-description"><a href="./posts/ev-charger-siting.html" class="no-external">
+A few weeks ago, my husband and I sat at our kitchen table to do what thousands of Canadian families do every year: pick out our next car. We really wanted to go green. We…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/ev-charger-siting.html" class="no-external">
+<div class="listing-date">
+Jan 16, 2026
+</div>
+<div class="listing-author">
+Shruti Sasi
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "EV Charger Insights"
+  title: "EV Charger Blog"
   navbar:
     left:
       - text: "Home"
