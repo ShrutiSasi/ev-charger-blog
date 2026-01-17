@@ -8,7 +8,7 @@ format: html
 
 # Charging the Future: Can Data Science Fix My “Range Anxiety”?
 
-![AI generated image](/resources/ev_station.jpg){fig-alt="AI generated image" fig-align="center" width="500"}
+![AI generated image](/resources/ev_station.jpg){fig-alt="AI generated image" fig-align="center" width="800"}
 
 ## EV or Gas/Hybrid: Which should I pick?
 
