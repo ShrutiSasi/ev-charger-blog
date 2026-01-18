@@ -1,12 +1,11 @@
 ---
-title: "Predictive EV Charger Siting in Canada"
+title: "Charging the Future: Can Data Science Fix My “Range Anxiety”?"
 author: "Shruti Sasi"
 date: 2026-01-16
-categories: [EV, ML, Data Science]
+categories: [EV, Analysis, ML, Data Science]
 format: html
 ---
 
-# Charging the Future: Can Data Science Fix My “Range Anxiety”?
 
 ![AI generated image](/resources/ev_station.jpg){fig-alt="AI generated image" fig-align="center" width="800"}
 

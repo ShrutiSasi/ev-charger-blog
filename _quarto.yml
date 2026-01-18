@@ -4,12 +4,7 @@ project:
 
 website:
   title: "EV Charger Blog"
-  navbar:
-    left:
-      - text: "Home"
-        href: index.qmd
-      - text: "Blog"
-        href: posts/
+  navbar:    
     right:
       - icon: github
         href: https://github.com/ShrutiSasi/ev-charger-blog
@@ -17,3 +12,7 @@ website:
 format:
   html:
     theme: cosmo
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+    smooth-scroll: true
